@@ -4,16 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server/app.js"
+    "start": "nodemon --inspect=127.0.0.1:9230 --watch ./server ./server/app.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
     "@koa/cors": "^2.2.2",
+    "apollo-server": "^2.0.7",
+    "apollo-server-koa": "^2.0.6",
     "graphql": "^14.0.2",
+    "graphql-tools": "^3.1.1",
     "koa": "^2.5.3",
     "koa-body": "^4.0.4",
+    "koa-bodyparser": "^4.2.1",
     "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
     "mysql": "^2.16.0"

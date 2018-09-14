@@ -1,7 +1,10 @@
+const pool = require('../../utils/getPool')
 module.exports = (router) => {
-  router.get('/list', async (ctx) => {
+  router.post('/list', async (ctx) => {
+    const graphl = ctx.request.body // graphql语句
+    const result = await pool.query(`SELECT * FROM t_user`)
     ctx.body = {
-      list: [1, 2, 3, 4, 5]
+      list: result
     }
   })
-}
+}  
